@@ -1,5 +1,5 @@
 export enum Types {
-    npc = "NPC",
-    player = "Player",
-    animal = 'Animal',
+  npc = 'NPC',
+  player = 'Player',
+  animal = 'Animal',
 }
