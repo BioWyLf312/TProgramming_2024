@@ -14,7 +14,7 @@ export class Battle {
   }
 
   private handler(message: string) {
-    console.log(message);
+    console.log("\x1b[31m",message, "\x1b[0m");
   }
 
   static fight(player1: Character, player2: Character, handler: (message: string) => void): string {

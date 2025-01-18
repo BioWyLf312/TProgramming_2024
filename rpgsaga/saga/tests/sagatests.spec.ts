@@ -33,12 +33,12 @@ describe('Character', () => {
 
   it('should add an ability to the character', () => {
     const ability = new Ability(
-      'Fireball',
-      () => ({ name: 'Fireball', duration: 1, effect: () => {}, affectsAttack: false }),
+      'Fire Arrow',
+      () => ({ name: 'Fire Arrow', duration: 1, effect: () => {}, affectsAttack: false }),
       3,
     );
     const message = hero.addAbility(ability);
-    expect(message).toBe('Geralt learns ability: Fireball.');
+    expect(message).toBe('Geralt learns ability: Fire Arrow.');
     expect(hero.abilities).toContain(ability);
   });
 
@@ -55,7 +55,7 @@ describe('Character', () => {
   });
 
   it('should restore health to the maximum', () => {
-    hero.health = 50; // Simulating damage
+    hero.health = 50;
     hero.restoreHealth();
     expect(hero.health).toBe(hero.maxHealth);
   });
